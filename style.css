@@ -54,7 +54,7 @@ body {
 }
 
 .site-header {
-  background: url(../images/hero-background.jpg);
+  background: url(images/hero-background.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
