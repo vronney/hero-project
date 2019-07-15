@@ -12,4 +12,6 @@ All photos from [Unsplash](https://unsplash.com).
 
 All videos from YouTube.
 
-[Demo](https://vronney.github.io/hero-project/)
+## Link
+
+Check out the website here - [Demo](https://vronney.github.io/hero-project/)
