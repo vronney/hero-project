@@ -181,8 +181,18 @@
   </article>
 
   <article id="page-carousel" class="page-section">
+    <header class="page-section-header container text-center">
+      <h2 class="page-section-title my-3">Photo Carousel Images</h2>
+    </header>
     <section id="layout-carousel" class="layout-carousel carousel slide" data-ride="carousel">
       <div class="carousel-inner">
+        <ol class="carousel-indicators">
+          <li data-target="#layout-carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#layout-carousel" data-slide-to="1"></li>
+          <li data-target="#layout-carousel" data-slide-to="2"></li>
+          <li data-target="#layout-carousel" data-slide-to="3"></li>
+        </ol>
+
         <section class="carousel-item active">
           <img class="layout-image img-fluid d-block w-100" src="images/floating-angel.jpg" alt="woman with wings floating">
         </section>
