@@ -126,3 +126,43 @@ body {
   background-color: var(--light-blue);
 }
 
+@media screen and (min-width: 768px) {
+  #page-floater {
+    margin: 150px 0 150px 0;
+  }
+
+  .layout-image-floater {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+  }
+
+  .floater-heading {
+    margin-left: 70px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #page-floater {
+    margin: 250px 0 0 0;
+  }
+
+  .floater-heading {
+    margin: 300px 0 0 0;
+  }
+}
+
+.layout-floater .layout-container {
+  position: relative;
+}
+
+.layout-floater .layout-image-floater {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-15deg) scale(1.1);
+  width: 400px;
+  height: 400px;
+}
+
+
