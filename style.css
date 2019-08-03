@@ -150,6 +150,11 @@ body {
   .floater-heading {
     margin: 300px 0 0 0;
   }
+
+  .layout-floater .layout-image-floater {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 .layout-floater .layout-container {
