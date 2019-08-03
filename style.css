@@ -165,4 +165,8 @@ body {
   height: 400px;
 }
 
+#page-cards {
+  background-color: var(--light-blue);
+}
+
 
