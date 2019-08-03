@@ -144,16 +144,16 @@ body {
 
 @media screen and (max-width: 576px) {
   #page-floater {
-    margin: 250px 0 0 0;
+    margin: 200px 0 0 0;
   }
 
   .floater-heading {
-    margin: 300px 0 0 0;
+    margin: 200px 0 0 0;
   }
 
   .layout-floater .layout-image-floater {
-    width: 100px;
-    height: 100px;
+    width: 300px !important;
+    height: 300px !important;
   }
 }
 
