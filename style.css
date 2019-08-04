@@ -174,4 +174,13 @@ body {
   background-color: var(--light-blue);
 }
 
+.modal-dialog {
+  height: 100vh;
+  padding-top: 100px;
+}
+
+.model-content img {
+  vertical-align: middle;
+}
+
 
