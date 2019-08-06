@@ -12,10 +12,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".site-nav" data-offset="55">
   <!-- Navbar Section -->
   <header id="page-hero" class="site-header">
-    <nav class="site-nav family-sans text-uppercase navbar navbar-expand-md navbar-dark">
+    <nav class="site-nav family-sans text-uppercase navbar navbar-expand-md navbar-dark fixed-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="#page-hero"><i class="fas fa-cube"></i> 3 John 1:2</a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myTogglerNav"
@@ -72,7 +72,7 @@
     <section class="layout-mulicolum container">
       <div class="row justify-content-center family-sans text-uppercase">
         <section class="mt-5 col-10 col-md-6 col-lg-4 col-xl-3 mr-4">
-          <img class="layout-image" src="images/isaiah-no weapon.jpg" style="width: 300px;" alt="Sheild - No Weapon">
+          <img class="layout-image" src="images/isaiah-no weapon.jpg" style="width: 300px;" alt="Shield - No Weapon">
           <h5 class="layout-title pt-2">No Weapon Forged Against You Will Prevail.</h5>
           <blockquote>~ Isaiah 54:17</blockquote>
         </section>
@@ -143,12 +143,12 @@
   <!-- Photogrid Section -->
   <article id="page-photogrid" class="container-fluid page-section">
     <header class="page-section-header container text-center">
-      <h2 class="page-section-title">Photo Grid Images</h2>
+      <h2 class="page-section-title pt-5">Photo Grid Images</h2>
     </header>
     <section class="layout-photogrid text-center">
       <div class="row justify-content-center">
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-3">
-          <a data-toggle="modal" data-target="#site-modal" data-highres="images/aaron-burden-3403_KhdpwU-unsplash.jpg" href="#"><img class="layout-image" style="width:300px; height: 200px;" src="images/aaron-burden-3403_KhdpwU-unsplash.jpg" alt="bible on a bed of leaves"></a>
+          <a data-toggle="modal" data-target="#site-modal" data-title="Bible On A Bed Of Leaves" data-highres="images/aaron-burden-3403_KhdpwU-unsplash.jpg" href="#"><img class="layout-image" style="width:300px; height: 200px;" src="images/aaron-burden-3403_KhdpwU-unsplash.jpg" alt="bible on a bed of leaves"></a>
         </div>
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-3">
           <a data-toggle="modal" data-target="#site-modal" data-highres="images/ben-white-4K2lIP0zc_k-unsplash.jpg" href="#"><img class="layout-image" style="width:300px;" src="images/ben-white-4K2lIP0zc_k-unsplash.jpg" alt="little boy laughing with bible in lap"></a>
@@ -184,7 +184,7 @@
   <!-- Carousel Section -->
   <article id="page-carousel" class="page-section">
     <header class="page-section-header container text-center">
-      <h2 class="page-section-title my-3">Photo Carousel</h2>
+      <h2 class="page-section-title my-3 pt-5">Photo Carousel</h2>
     </header>
     <section id="layout-carousel" class="layout-carousel carousel slide" data-ride="carousel">
       <div class="carousel-inner">
@@ -225,7 +225,7 @@
   <!-- Nested Section -->
   <article id="page-nested" class="page-section">
     <header class="page-section-header container text-center">
-      <h2 class="page-section-title my-3">Nested</h2>
+      <h2 class="page-section-title my-3 pt-5">Nested</h2>
     </header>
     <div class="layout-nested container py-5">
       
@@ -284,7 +284,7 @@
   <article id="page-icons" class="page-section">
     
     <header class="page-section-header container text-center">
-      <h2 class="page-section-title my-3">Icons</h2>
+      <h2 class="page-section-title my-3 pt-5">Icons</h2>
     </header>
 
     <section class="layout-iconcolums container py-5">
@@ -327,7 +327,7 @@
         </section>
         
         <section class="col-10 col-md-6 text-center text-md-left pl-md-5 floater-heading">
-          <h2 class="layout-title">You've Got A Friend</h2>
+          <h2 class="layout-title floater-text pt-5">You've Got A Friend</h2>
           <p class="layout-text">When you hang with God, you've got the best friend in the world.</p>
         </section>
       </div>
@@ -338,7 +338,7 @@
   <!-- Cards Section -->
   <article id="page-cards" class="page-section pb-5">
     <header class="page-section-header container text-center">
-      <h2 class="page-section-title my-3">Cards </h2>
+      <h2 class="page-section-title my-3 pt-5">Cards </h2>
     </header>
     <section class="layout-cards container">
       <div class="row justify-content-center">
@@ -418,7 +418,10 @@
   <article id="site-modal" class="modal fade">
     <div class="modal-dialog modal-lg mt-5">
       <div class="modal-content">
-        <img data-dismiss="modal" class="img-fluid" src="#" alt="Modal Photo">
+        <div class="modal-header">
+          <h5 class="modal-title"></h5>
+          <img data-dismiss="modal" class="img-fluid" src="#" alt="Modal Photo">
+        </div>
       </div>
     </div>
   </article>

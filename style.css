@@ -58,6 +58,7 @@ body {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  height: 100vh;
 }
 
 .site-header .page-section-title {
@@ -90,6 +91,10 @@ body {
 
 .site-header .layout-hero {
   min-height: 90vh;
+}
+
+.site-nav.inbody {
+  background: #FFE2AB;
 }
 
 .layout-media .layout-video {
