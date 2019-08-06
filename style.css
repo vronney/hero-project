@@ -97,6 +97,17 @@ body {
   background: #FFE2AB;
 }
 
+@media screen and (max-width: 768px) {
+  .site-header .navbar-collapse {
+    background-color: rgba(0,0,0,0.9);
+    padding: 10px;
+  }
+
+  .site-nav {
+    padding: 0 !important;
+  }
+}
+
 .layout-media .layout-video {
   max-width: 100vw;
 }
