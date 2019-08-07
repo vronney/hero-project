@@ -15,25 +15,42 @@
 <body data-spy="scroll" data-target=".site-nav" data-offset="55">
   <!-- Navbar Section -->
   <header id="page-hero" class="site-header">
-    <nav class="site-nav family-sans text-uppercase navbar navbar-expand-md navbar-dark fixed-top">
+    <nav class="navbar site-nav family-sans text-uppercase navbar-expand-md navbar-dark fixed-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="#page-hero"><i class="fas fa-cube"></i> 3 John 1:2</a>
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myTogglerNav"
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myTogglerNav"
           aria-controls="#myTogglerNav" aria-label="Toggle Navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <section class="collapse navbar-collapse" id="myTogglerNav">
-          <div class="navbar-nav ml-auto">
-            <a class="nav-item nav-link" href="#page-hero">Home</a>
-            <a class="nav-item nav-link" href="#page-multicolumn">Columns</a>
-            <a class="nav-item nav-link" href="#page-media">Media</a>
-            <a class="nav-item nav-link" href="#page-photogrid">Grid</a>
-            <a class="nav-item nav-link" href="#page-carousel">Carousel</a>
-            <a class="nav-item nav-link" href="#page-nested">Nested</a>
-            <a class="nav-item nav-link" href="#page-icons">Icons</a>
-            <a class="nav-item nav-link" href="#page-floater">Floater</a>
-            <a class="nav-item nav-link" href="#page-cards">Cards</a>
-          </div>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show" >
+            <a class="nav-link" href="#page-hero">Home</a>
+            </li>
+            <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show" >
+            <a class="nav-link" href="#page-multicolumn">Columns</a>
+            </li>
+            <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show" >
+            <a class="nav-link" href="#page-media">Media</a>
+            </li>
+            <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show" >
+            <a class="nav-link" href="#page-photogrid">Grid</a>
+            </li>
+            <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show" >
+            <a class="nav-link" href="#page-carousel">Carousel</a>
+            </li>
+            <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show" >
+            <a class="nav-link" href="#page-nested">Nested</a>
+            </li>
+            <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show" >
+            <a class="nav-link" href="#page-icons">Icons</a>
+            </li>
+            <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show" >
+            <a class="nav-link" href="#page-floater">Floater</a>
+            </li>
+            <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show" >
+            <a class="nav-link" href="#page-cards">Cards</a>
+          </ul>
         </section>
       </div>
     </nav>
@@ -415,6 +432,7 @@
     </section>
   </footer>
 
+  <!-- Modal Section -->
   <article id="site-modal" class="modal fade">
     <div class="modal-dialog modal-lg mt-5">
       <div class="modal-content">
@@ -426,16 +444,13 @@
     </div>
   </article>
 
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="script.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-  integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
-  crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
 </body>
 
 </html>

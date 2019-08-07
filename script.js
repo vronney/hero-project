@@ -35,5 +35,5 @@ $(document).ready(function() {
       .find('.modal-content img')
       .attr('src', $(event.relatedTarget).data('highres'));
   });
-
+ 
 });
