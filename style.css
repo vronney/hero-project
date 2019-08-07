@@ -128,7 +128,7 @@ body {
 }
 
 .site-nav.inbody {
-  background: #FF0707;
+  background: #007bff;
 }
 
 @media screen and (max-width: 768px) {
@@ -239,6 +239,6 @@ body {
 }
 
 .site-footer {
-  background-color: #FF0707;
+  background-color: #007bff;
 }
 
