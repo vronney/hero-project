@@ -38,8 +38,8 @@ $(document).ready(function() {
 
     $('#page-floater .layout-animation').css('visibility: hidden');
 
-    if (hash === '#page-floater') {
-      $('#page-floater .layout-animation').addClass('animated fadeInLeft');
+    if (hash === '#page-icons') {
+      $('#page-floater .layout-animation').addClass('animated rotateInDownLeft');
       $('#page-floater .layout-animation').removeClass('invisible');
     }
 
