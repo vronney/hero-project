@@ -36,6 +36,13 @@ $(document).ready(function() {
       $('#page-multicolumn .layout-animation').removeClass('invisible');
     }
 
+    $('#page-floater .layout-animation').css('visibility: hidden');
+
+    if (hash === '#page-floater') {
+      $('#page-floater .layout-animation').addClass('animated fadeInLeft');
+      $('#page-floater .layout-animation').removeClass('invisible');
+    }
+
   });
 
   $('#site-modal').on('show.bs.modal', function (event) {
