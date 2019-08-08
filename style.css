@@ -67,6 +67,11 @@ body {
   font-weight: 200;
 }
 
+.site-header .animated{
+  animation-delay: 2s;
+  animation-duration: 2s;
+}
+
 .site-header .page-section-text {
   font-size: 1.2em;
   font-family: var(--font-family-sans-serif);
@@ -103,12 +108,14 @@ body {
   background: var(--light-blue);
 }
 
-.layout-photogrid .layout-image {
-  transition: all 0.3s ease-out;
-}
+@media screen and (min-width: 770px) {
+  .layout-photogrid .layout-image {
+    transition: all 0.3s ease-out;
+  }
 
-.layout-photogrid .layout-image:hover {
-  transform: scale(1.1) translate(-3px);
+  .layout-photogrid .layout-image:hover {
+    transform: scale(1.1) translate(-3px);
+  }
 }
 
 .page-section-header .page-section-title {
