@@ -47,6 +47,10 @@
   font-family: var(--font-family-text);
 }
 
+.animated {
+  visibility: visible !important;
+}
+
 body {
   font-family: var(--font-family-text);
   color: var(--color-text);

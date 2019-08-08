@@ -28,6 +28,14 @@ $(document).ready(function() {
     } else {
       $('header nav').removeClass('inbody');
     }
+
+    $('#page-multicolumn .layout-animation').css('visibility: hidden');
+
+    if (hash === '#page-multicolumn') {
+      $('#page-multicolumn .layout-animation').addClass('animated fadeInRight');
+      $('#page-multicolumn .layout-animation').removeClass('invisible');
+    }
+
   });
 
   $('#site-modal').on('show.bs.modal', function (event) {
