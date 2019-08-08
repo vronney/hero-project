@@ -192,6 +192,14 @@ body {
     margin: 150px 0 150px 0;
   }
 
+  #page-multicolumn .layout-animation {
+    visibility: hidden;
+  }
+
+  #page-floater .layout-animation {
+    visibility: hidden;
+  }
+
   .layout-image-floater {
     width: 150px;
     height: 150px;

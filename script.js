@@ -31,14 +31,14 @@ $(document).ready(function() {
 
     $('#page-multicolumn .layout-animation').css('visibility: hidden');
 
-    if (hash === '#page-multicolumn') {
+    if ($(window).width() > 768 && hash === '#page-multicolumn') {
       $('#page-multicolumn .layout-animation').addClass('animated fadeInRight');
       $('#page-multicolumn .layout-animation').removeClass('invisible');
     }
 
     $('#page-floater .layout-animation').css('visibility: hidden');
 
-    if (hash === '#page-icons') {
+    if ($(window).width() > 768 && hash === '#page-icons') {
       $('#page-floater .layout-animation').addClass('animated rotateInDownLeft');
       $('#page-floater .layout-animation').removeClass('invisible');
     }
