@@ -32,8 +32,6 @@ var filesToCache = [
   'images/zac-durant-_6HzPU9Hyfg-unsplash.jpg'
 ];
 
-document.addEventListener('touchstart', onTouchStart, {passive: true});
-
 self.addEventListener('install', function(e) {
     console.log('[ServiceWorker] Installed');
 
