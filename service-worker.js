@@ -1,129 +1,129 @@
-var cacheName = 'heroProject';
-var filesToCache = [
-  '/',
-  'index.html',
-  'style.css',
-  'script.js',
-  'images/aaron-burden-3403_KhdpwU-unsplash.jpg',
-  'images/ben-white-4K2lIP0zc_k-unsplash.jpg',
-  'images/bible-solid.svg',
-  'images/cross-night.jpg',
-  'images/cross-on-mountain.jpg',
-  'images/edward-cisneros-QSa-uv4WJ0k-unsplash.jpg',
-  'images/floating-angel.jpg',
-  'images/geetanjal-khanna-8CwoHpZe3qE-unsplash.jpg',
-  'images/hand-holding-heart-solid.svg',
-  'images/hands-solid.svg',
-  'images/hannah-busing-FF049vNP1eg-unsplash.jpg',
-  'images/heaven.svg',
-  'images/hero-background.jpg',
-  'images/isaiah-no weapon.jpg',
-  'images/john14_12.jpg',
-  'images/john15_7.jpg',
-  'images/lady-on-pier.jpg',
-  'images/little-girl-with-wings.jpg',
-  'images/man-on-knees.jpg',
-  'images/matt-botsford-bBNabN9R_ac-unsplash.jpg',
-  'images/rachel-lynette-french-U7HLzMO4SIY-unsplash.jpg',
-  'images/scott-broome-9l7Z-oBVYYU-unsplash.jpg',
-  'images/sleeping-angel.jpg',
-  'images/white-bird.jpg',
-  'images/woman-with-wings.jpg',
-  'images/zac-durant-_6HzPU9Hyfg-unsplash.jpg'
-];
+// var cacheName = 'heroProject';
+// var filesToCache = [
+//   '/',
+//   'index.html',
+//   'style.css',
+//   'script.js',
+//   'images/aaron-burden-3403_KhdpwU-unsplash.jpg',
+//   'images/ben-white-4K2lIP0zc_k-unsplash.jpg',
+//   'images/bible-solid.svg',
+//   'images/cross-night.jpg',
+//   'images/cross-on-mountain.jpg',
+//   'images/edward-cisneros-QSa-uv4WJ0k-unsplash.jpg',
+//   'images/floating-angel.jpg',
+//   'images/geetanjal-khanna-8CwoHpZe3qE-unsplash.jpg',
+//   'images/hand-holding-heart-solid.svg',
+//   'images/hands-solid.svg',
+//   'images/hannah-busing-FF049vNP1eg-unsplash.jpg',
+//   'images/heaven.svg',
+//   'images/hero-background.jpg',
+//   'images/isaiah-no weapon.jpg',
+//   'images/john14_12.jpg',
+//   'images/john15_7.jpg',
+//   'images/lady-on-pier.jpg',
+//   'images/little-girl-with-wings.jpg',
+//   'images/man-on-knees.jpg',
+//   'images/matt-botsford-bBNabN9R_ac-unsplash.jpg',
+//   'images/rachel-lynette-french-U7HLzMO4SIY-unsplash.jpg',
+//   'images/scott-broome-9l7Z-oBVYYU-unsplash.jpg',
+//   'images/sleeping-angel.jpg',
+//   'images/white-bird.jpg',
+//   'images/woman-with-wings.jpg',
+//   'images/zac-durant-_6HzPU9Hyfg-unsplash.jpg'
+// ];
 
-document.addEventListener('touchstart', onTouchStart, {passive: true});
+// document.addEventListener('touchstart', onTouchStart, {passive: true});
 
-self.addEventListener('install', function(e) {
-    console.log('[ServiceWorker] Installed');
+// self.addEventListener('install', function(e) {
+//     console.log('[ServiceWorker] Installed');
 
-    // e.waitUntil Delays the event until the Promise is resolved
-    e.waitUntil(
+//     // e.waitUntil Delays the event until the Promise is resolved
+//     e.waitUntil(
 
-    	// Open the cache
-	    caches.open(cacheName).then(function(cache) {
+//     	// Open the cache
+// 	    caches.open(cacheName).then(function(cache) {
 
-	    	// Add all the default files to the cache
-			console.log('[ServiceWorker] Caching filesToCache');
-			return cache.addAll(filesToCache);
-	    })
-	); // end e.waitUntil
-});
-
-
-self.addEventListener('activate', function(e) {
-    console.log('[ServiceWorker] Activated');
-
-    e.waitUntil(
-
-    	// Get all the cache keys (cacheName)
-		caches.keys().then(function(cacheNames) {
-			return Promise.all(cacheNames.map(function(thisCacheName) {
-
-				// If a cached item is saved under a previous cacheName
-				if (thisCacheName !== cacheName) {
-
-					// Delete that cached file
-					console.log('[ServiceWorker] Removing Cached Files from Cache - ', thisCacheName);
-					return caches.delete(thisCacheName);
-				}
-			}));
-		})
-	); // end e.waitUntil
-
-});
+// 	    	// Add all the default files to the cache
+// 			console.log('[ServiceWorker] Caching filesToCache');
+// 			return cache.addAll(filesToCache);
+// 	    })
+// 	); // end e.waitUntil
+// });
 
 
-self.addEventListener('fetch', function(e) {
-	console.log('[ServiceWorker] Fetch', e.request.url);
+// self.addEventListener('activate', function(e) {
+//     console.log('[ServiceWorker] Activated');
 
-	// e.respondWidth Responds to the fetch event
-	e.respondWith(
+//     e.waitUntil(
 
-		// Check in cache for the request being made
-		caches.match(e.request)
+//     	// Get all the cache keys (cacheName)
+// 		caches.keys().then(function(cacheNames) {
+// 			return Promise.all(cacheNames.map(function(thisCacheName) {
+
+// 				// If a cached item is saved under a previous cacheName
+// 				if (thisCacheName !== cacheName) {
+
+// 					// Delete that cached file
+// 					console.log('[ServiceWorker] Removing Cached Files from Cache - ', thisCacheName);
+// 					return caches.delete(thisCacheName);
+// 				}
+// 			}));
+// 		})
+// 	); // end e.waitUntil
+
+// });
 
 
-			.then(function(response) {
+// self.addEventListener('fetch', function(e) {
+// 	console.log('[ServiceWorker] Fetch', e.request.url);
 
-				// If the request is in the cache
-				if ( response ) {
-					console.log("[ServiceWorker] Found in Cache", e.request.url, response);
-					// Return the cached version
-					return response;
-				}
+// 	// e.respondWidth Responds to the fetch event
+// 	e.respondWith(
 
-				// If the request is NOT in the cache, fetch and cache
+// 		// Check in cache for the request being made
+// 		caches.match(e.request)
 
-				var requestClone = e.request.clone();
-				return fetch(requestClone)
-					.then(function(response) {
 
-						if ( !response ) {
-							console.log("[ServiceWorker] No response from fetch ")
-							return response;
-						}
+// 			.then(function(response) {
 
-						var responseClone = response.clone();
+// 				// If the request is in the cache
+// 				if ( response ) {
+// 					console.log("[ServiceWorker] Found in Cache", e.request.url, response);
+// 					// Return the cached version
+// 					return response;
+// 				}
 
-						//  Open the cache
-						caches.open(cacheName).then(function(cache) {
+// 				// If the request is NOT in the cache, fetch and cache
 
-							// Put the fetched response in the cache
-							cache.put(e.request, responseClone);
-							console.log('[ServiceWorker] New Data Cached', e.request.url);
+// 				var requestClone = e.request.clone();
+// 				return fetch(requestClone)
+// 					.then(function(response) {
 
-							// Return the response
-							return response;
+// 						if ( !response ) {
+// 							console.log("[ServiceWorker] No response from fetch ")
+// 							return response;
+// 						}
+
+// 						var responseClone = response.clone();
+
+// 						//  Open the cache
+// 						caches.open(cacheName).then(function(cache) {
+
+// 							// Put the fetched response in the cache
+// 							cache.put(e.request, responseClone);
+// 							console.log('[ServiceWorker] New Data Cached', e.request.url);
+
+// 							// Return the response
+// 							return response;
 			
-				        }); // end caches.open
+// 				        }); // end caches.open
 
-					})
-					.catch(function(err) {
-						console.log('[ServiceWorker] Error Fetching & Caching New Data', err);
-					});
+// 					})
+// 					.catch(function(err) {
+// 						console.log('[ServiceWorker] Error Fetching & Caching New Data', err);
+// 					});
 
 
-			}) // end caches.match(e.request)
-	); // end e.respondWith
-});
+// 			}) // end caches.match(e.request)
+// 	); // end e.respondWith
+// });
