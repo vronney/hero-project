@@ -51,17 +51,18 @@ $(document).ready(function() {
       .attr('src', $(event.relatedTarget).data('highres'));
   });
 
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker
+        .register('/service-worker.js').then(function (registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope');
+        }, function (err) {
+          // Registration failed :(
+          console.log('ServiceWorker registration failed', err);
+        });
+    });
+  }
+
 });
 
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function () {
-    navigator.serviceWorker
-      .register('/service-worker.js').then(function (registration) {
-        // Registration was successful
-        console.log('ServiceWorker registration successful with scope');
-      }, function (err) {
-        // Registration failed :(
-        console.log('ServiceWorker registration failed', err);
-      });
-  });
-}
