@@ -1,3 +1,20 @@
+//Service Worker
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker
+      .register('service-worker.js', {
+        scope: '/'
+      }).then(function (registration) {
+        // Registration was successful
+        console.log('ServiceWorker registration successful with scope');
+      }, function (err) {
+        // Registration failed :(
+        console.log('ServiceWorker registration failed', err);
+      });
+  });
+}
+
 $(document).ready(function() {
 
   var topoffset = 55;
@@ -52,16 +69,4 @@ $(document).ready(function() {
   });
 });
 
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function () {
-    navigator.serviceWorker
-      .register('\service-worker.js').then(function (registration) {
-        // Registration was successful
-        console.log('ServiceWorker registration successful with scope');
-      }, function (err) {
-        // Registration failed :(
-        console.log('ServiceWorker registration failed', err);
-      });
-  });
-}
 
