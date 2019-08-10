@@ -57,7 +57,7 @@ $(document).ready(function () {
 }); //End of jQuery
 
 //Service Worker
-Check if service worker is supported
+// Check if service worker is supported
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker
