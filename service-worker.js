@@ -1,4 +1,4 @@
-var cacheName = 'heroProject';
+var cacheName = 'heroProject2';
 // var cacheAssets = [
 //   '/',
 //   '/index.html',
