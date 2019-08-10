@@ -37,7 +37,7 @@ self.addEventListener('install', e => {
 
     // e.waitUntil Delays the event until the Promise is resolved
     e.waitUntil(
-
+	//Only use if wanting to cache certain items 
     	// Open the cache
 	    // caches.open(cacheName).then(cache => {
 
