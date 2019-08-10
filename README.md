@@ -18,6 +18,7 @@ Demonstrated layout classes and showed what it takes to customize CSS. Addressed
 - Creating carousels
 - Adding interactivity
 - Creating animation
+- Service Worker added to work offline
 
 ## Photos
 
