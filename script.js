@@ -1,12 +1,12 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
   var topoffset = 55;
-  
+
   // Use smooth scrolling when clicking on navigation
-  $('.navbar a[href*=\\#]:not([href=\\#])').click(function() {
-    if (location.pathname.replace(/^\//, '') === 
-    this.pathname.replace(/^\//, '') && 
-    location.hostname === this.hostname) {
+  $('.navbar a[href*=\\#]:not([href=\\#])').click(function () {
+    if (location.pathname.replace(/^\//, '') ===
+      this.pathname.replace(/^\//, '') &&
+      location.hostname === this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
       if (target.length) {
@@ -18,10 +18,10 @@ $(document).ready(function() {
     } //click function
   }); //smooth scrolling
 
-  $(window).on('activate.bs.scrollspy', function(){
+  $(window).on('activate.bs.scrollspy', function () {
     var hash = $('.site-nav')
-    .find('a.active')
-    .attr('href');
+      .find('a.active')
+      .attr('href');
 
     if (hash !== '#page-hero') {
       $('header nav').addClass('inbody');
@@ -49,17 +49,20 @@ $(document).ready(function() {
     $(this)
       .find('.modal-content img')
       .attr('src', $(event.relatedTarget).data('highres'));
+    $(this)
+      .find('.modal-content h5')
+      .html(`<span>${$(event.relatedTarget).data("title")}</span>`);  
   });
-});
 
+}); //End of jQuery
 
 //Service Worker
-//Check if service worker is supported
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker
+Check if service worker is supported
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker
       .register('./service-worker.js')
       .then(reg => console.log('Service Worker: Registered'))
       .catch(err => console.log(`Service Worker: Error: ${err}`))
-    });
-  }
+  });
+}

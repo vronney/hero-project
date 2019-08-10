@@ -229,6 +229,10 @@ body {
   .layout-floater .layout-text {
     margin-left: 0 !important;
   }
+
+  #site-modal .modal-title {
+    font-size: 20px;
+  }
 }
 
 .layout-floater .layout-container {
