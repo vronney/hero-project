@@ -1,0 +1,22 @@
+{
+  "name": "hero-project",
+  "version": "1.0.0",
+  "description": "Web site with a bible verse of the day popup",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vronney/hero-project.git"
+  },
+  "author": "Ron Vargas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vronney/hero-project/issues"
+  },
+  "homepage": "https://github.com/vronney/hero-project#readme",
+  "dependencies": {
+    "serve": "^11.1.0"
+  }
+}

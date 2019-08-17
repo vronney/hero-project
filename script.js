@@ -57,7 +57,8 @@ $(document).ready(function () {
 }); //End of jQuery
 
 //Service Worker
-// Check if service worker is supported
+// Check if service worker is supported by browser
+
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker
@@ -66,3 +67,12 @@ if ('serviceWorker' in navigator) {
       .catch(err => console.log(`Service Worker: Error: ${err}`))
   });
 }
+
+// Section that will display a random bible verse for the day
+
+const bibleVerse = () => {
+  // will input api fetch here for verse of the day
+  console.log("Bible Verse of the Day. Yay!!!!");
+};
+
+window.setTimeout(bibleVerse, 5000);
