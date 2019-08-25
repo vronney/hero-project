@@ -56,53 +56,58 @@ $(document).ready(function () {
 
 }); //End of jQuery
 
-//Service Worker
-// Check if service worker is supported by browser
+Service Worker
+Check if service worker is supported by browser
 
-// if ('serviceWorker' in navigator) {
-//   window.addEventListener('load', () => {
-//     navigator.serviceWorker
-//       .register('./service-worker.js')
-//       .then(reg => console.log('Service Worker: Registered'))
-//       .catch(err => console.log(`Service Worker: Error: ${err}`))
-//   });
-// }
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker
+      .register('./service-worker.js')
+      .then(reg => console.log('Service Worker: Registered'))
+      .catch(err => console.log(`Service Worker: Error: ${err}`))
+  });
+}
 
 // Section that will display a random bible verse for the day
+const url = "https://api.lsm.org/recver.php?String='Prov. 29:18; Acts 26:19; Eph. 4:4-6; Rev. 21:2, 9-10; Heb. 12.1'&Out=json";
 
-const url = "https://api.lsm.org/recver.php?String='Prov. 29:18; Acts 26:19; Eph. 4:4-6; Rev. 21:2, 9-10'&Out=json";
+  fetch(url)
+    .then((response) => {
+      response.json()
+        .then((data) => {
+          const verseOfDay = [(data.verses)];
 
-fetch(url)
-  .then((response) => {
-    response.json()
-    .then((data) => {
-      const verseOfDay = [(data.verses)];
+          // Grabs the array values -- [ref: & text:]
+          const values = Object.values(verseOfDay);
+          // console.log(values);
 
-      // Grabs the array values -- [ref: & text:]
-      const values = Object.values(verseOfDay);
-      // console.log(values);
+          // Looping through the array of values
+          for (const value of values) {
 
-      // Looping through the array of values
-      for (const value of values) {
-        
-        // A randomly selected index in the value array will be selected
-        const verse = value[Math.floor(Math.random() * value.length)];
-        // console.log(verse);
+            // A randomly selected index in the value array will be selected
+            const verse = value[Math.floor(Math.random() * value.length)];
+            // console.log(verse);
 
-        // Verse is then broken down in to it values and then console separately
-        const ref = Object.values(verse);
-        console.log(ref[0]);
-        console.log(ref[1]);
+            // Verse is then broken down in to it values and then console separately
+            const ref = Object.values(verse);
+            console.log(ref[0]);
+            console.log(ref[1]);
 
-        const bibleVerse = () => {
-          // will input api fetch here for verse of the day
-          console.log("Bible Verse of the Day. Yay!!!!");
-          document.getElementById('verseOfTheDay').innerText = `${ref[0]}`;
-          document.getElementById('verseText').innerText = `${ref[1]}`;
-        };
+            const bibleVerse = () => {
+              // will input api fetch here for verse of the day
+              console.log("Bible Verse of the Day. Yay!!!!");
 
-        window.setTimeout(bibleVerse, 5000);
-      } 
-      
-    })
-  });
+              document.getElementById('verseOfTheDay').innerText = `${ref[0]}`;
+              document.getElementById('verseText').innerText = `${ref[1]}`;
+            
+            };
+
+            document.getElementById('pickVerse').addEventListener('click', bibleVerse);
+          }
+
+        })
+
+    });
+
+
+
