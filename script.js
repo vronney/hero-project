@@ -69,7 +69,7 @@ if ('serviceWorker' in navigator) {
 }
 
 // Section that will display a random bible verse for the day
-const url = "https://api.lsm.org/recver.php?String='Prov. 29:18; Acts 26:19; Eph. 4:4-6; Rev. 21:2, 9-10; Heb. 12.1'&Out=json";
+const url = "https://api.lsm.org/recver.php?String='Prov. 29:18; Acts 26:19; Eph. 4:4-6; Rev. 21:2, 9-10; Heb. 12:1; Isa. 45:3; Isa. 43:1-3; Eph. 1:3; 1 Pet. 1:7; 1 Pet. 3:10-11; 1 Pet. 5:7; 1 Pet. 5:8-9; John 14:6; John 8:12; Psa. 90:14-17; Psa. 91:2-4; Psa. 91:5-8; Psa. 91:9-13; Psa. 91:14-16; Rom. 12:2'&Out=json";
 
   fetch(url)
     .then((response) => {

@@ -265,3 +265,10 @@ body {
   background-color: #007bff;
 }
 
+#bibleVerse .modal-header h5, #bibleVerse .modal-body h4 {
+  font-style: italic;
+}
+
+#modalBorder {
+  border: 5px solid #007bff !important;
+}
