@@ -44,7 +44,7 @@ self.addEventListener('install', e => {
     // Add all the default files to the cache
 //     			console.log('ServiceWorker: Caching Files');
 //     			cache.addAll(cacheAssets);
-    	    })
+//     	    })
 //     	    .then(() => self.skipWaiting())
   ); // end e.waitUntil
 });
